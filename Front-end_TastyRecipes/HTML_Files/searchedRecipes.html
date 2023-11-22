@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/de05059076.js" crossorigin="anonymous"></script>
+    <Script src="/JS_Files/app.js" crossorigin="anonymous"></Script>
+    <link rel="stylesheet" href="/Css_Files/General.css">
+    <title>searched Recipes</title>
+</head>
+<body>
+    
+    <header id="header">
+        <a href="Home.html"><img src="/imges/Untitled-2.png" alt="Logo"></a>
+        <form id="searchForm">
+            <input type="search" name="searchBar">
+            <input type="button" value="Sök" id="searchButton">
+        </form>
+        <div class="divUserInlog">
+            <button id="loginRegister">login/register</button>
+            <p id="userName"></p>
+        </div>
+        <i onclick="openNav()">&#9776</i>
+        <nav id="mySidenav" class="sidenav">
+            <ul>
+                <a class="closebtn" onclick="openNav()">&times</a>
+                <hr>
+                <li><a id="logoutbutton">Logga out</a></li><hr>
+                <li><a id="profileLink">Min profile</a></li><hr>
+            </ul>
+        </nav>
+        <div>
+            <p>kategori</p>
+            <ul id="categoryOptions">
+                <li>Kött</li>
+                <li>Grön</li>
+                <li>Sött</li>
+                <li>Fisk</li>
+            </ul>
+        </div>
+    </header>
+    <section id="accountForms">
+        <form id="logIn" method="GET" onsubmit="return false">
+            <fieldset>
+                <legend>Logga in</legend>
+                <label for="logInUserName">Användarnamn</label>
+                <input type="text" name="userName" id="logInUserName">
+                <label for="logInPassword">Lösenord</label>
+                <input type="password" name="password" id="logInPassword">
+                <input type="submit" value="Loggain" name="buttom">
+            </fieldset>
+        </form>
+        <form id="createAcc" method="POST" onsubmit="return false">
+            <fieldset>
+                <legend>Skapa konto</legend>
+                <label for="createAccUserName">Användarnamn</label>
+                <input type="text" name="userName" id="createAccUserName">
+                <label for="createAccEmail">Mail</label>
+                <input type="email" name="email" id="createAccEmail">
+                <label for="createAccPassword">Lösenord</label>
+                <input type="password" name="password" id="createAccPassword">
+                <input type="submit" value="Skapa konto">
+            </fieldset>
+        </form>
+    </section>
+
+    <aside id="newestRecipes"></aside>
+    <main id="main" class="searchRecipeMain"></main>
+    <footer>
+        <p>ContactUs Phone Number: 04273837620. EmailAdres: TastyRecipes</p>
+    </footer>
+</body>
+</html>
